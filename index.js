@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
+app.use(express.static('dist'))
 app.use(express.json())
 
 app.use(cors())
@@ -9,14 +10,16 @@ app.use(cors())
 const blogs = [
     {
       id: "1",
-      title: "F# is an excellent Microsoft ech stack",
-      author: "James Faultleroy",
+      title: "F# is an excellent Microsoft tech stack",
+      author: "James Faultleroy",      
+      url: "https://www.google.com",
       likes: 5
     },
     {
       id: "2",
       title: "Scala is a scalable traditional tech launguage",
       author: "Samantha Taverner",
+      url: "https://za.yahoo.com",
       likes: 10
     }
 ]
